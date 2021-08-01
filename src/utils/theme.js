@@ -10,6 +10,7 @@ export const theme = {
   },
   fontSize: {
     hero: "15vw",
+    title: "4.8rem",
     body: {
       lg: "2.1rem",
       md: "1.4rem",

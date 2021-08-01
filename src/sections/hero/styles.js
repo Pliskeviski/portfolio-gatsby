@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
 `;
@@ -12,6 +13,7 @@ export const HeaderContent = styled.h2`
   align-items: center;
   color: ${({ theme }) => theme.colors.black};
   font-size: ${({ theme }) => theme.fontSize.body.md};
+  font-weight: 800;
 `;
 
 export const HeroContainer = styled.div`
