@@ -41,5 +41,15 @@ module.exports = {
         extensions: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          "Nunito:700,800",
+          "Poppins:500",
+        ],
+        display: "swap",
+      },
+    },
   ],
 };

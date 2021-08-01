@@ -7,13 +7,8 @@ const GlobalStyles = createGlobalStyle`
 	
 	body {
 	  margin: 0;
-	}
-	
-	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-	  html,
-	  body {
-	    height: calc(100vh - 56px);
-	  }
+		font-size: ${({ theme }) => theme.fontSize.body.md};
+		font-family: ${({ theme }) => theme.fonts.primary};
 	}
 	
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
