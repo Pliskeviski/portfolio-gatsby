@@ -46,7 +46,7 @@ module.exports = {
       options: {
         fonts: [
           "Nunito:700,800",
-          "Poppins:500",
+          "Poppins:500,700",
         ],
         display: "swap",
       },

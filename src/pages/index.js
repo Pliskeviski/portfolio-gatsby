@@ -1,11 +1,11 @@
 import React from "react";
 import { PageContainer } from "@components/page-container";
-import { HelloSection } from "@sections/hello";
+import { HeroSection } from "@sections/hero";
 
 const IndexPage = () => {
   return (
     <PageContainer>
-      <HelloSection />
+      <HeroSection />
     </PageContainer>
   );
 };

@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     light: "#fff9f9",
     dark: "#383838",
+    black: "#000000",
   },
   fonts: {
     primary: "Nunito, sans-serif",

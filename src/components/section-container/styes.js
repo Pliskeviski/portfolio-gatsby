@@ -9,4 +9,5 @@ export const StyledSection = styled.section`
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column;
+  height: 100vh;
 `;
