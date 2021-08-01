@@ -36,6 +36,7 @@ module.exports = {
         alias: {
           "@components": "src/components",
           "@sections": "src/sections",
+          "@utils": "src/utils",
         },
         extensions: [],
       },
