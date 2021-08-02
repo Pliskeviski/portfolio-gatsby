@@ -4,6 +4,7 @@ export const ContentContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
 `;
 
 export const HeaderContent = styled.h2`
