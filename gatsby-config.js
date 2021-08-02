@@ -17,7 +17,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: "Gustavo Pliskeviski - Portfolio",
+        icon: "src/images/icon.jpg",
       },
     },
     "gatsby-plugin-sharp",
