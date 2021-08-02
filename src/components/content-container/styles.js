@@ -7,6 +7,7 @@ export const StyledContentContainer = styled.div`
   color: ${({ theme, background }) =>
     theme.colors[background === "dark" ? "light" : "dark"]};
   min-height: 100vh;
+  box-sizing: border-box;
   scroll-snap-align: start;
 `;
 
