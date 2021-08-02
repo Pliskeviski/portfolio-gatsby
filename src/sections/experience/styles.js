@@ -10,7 +10,7 @@ export const ContainerItemTimeline = styled.div`
   flex-direction: column;
   padding: 0 3em 2em 2em;
   position: relative;
-  max-width: 378px;
+  max-width: 278px;
 
   &:before {
     width: 10px;
@@ -28,7 +28,7 @@ export const ContainerItemTimeline = styled.div`
   &:after {
     content: "";
     width: 3px;
-    height: 90%;
+    height: 100%;
     left: -2px;
     top: 18px;
     position: absolute;
