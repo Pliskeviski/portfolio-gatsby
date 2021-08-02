@@ -1,15 +1,35 @@
 import React, { useMemo } from "react";
 import { SectionContainer } from "@components/section-container";
 import { ContentContainer } from "@components/content-container";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import {
+  faLinkedin,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons'
 
 import {
   ContainerTimeline,
   ContainerItemTimeline,
   ItemTitle,
   ItemDescription,
+  CheckGitHubText,
+  GitHubLink,
+  GitHubImage,
+  GitHubName,
+  EmailContact,
+  LinkEmail,
+  ContainerGitHub,
+  ContainerContact,
+  FindMeOn,
+  ContactContainer,
+  ContainerSocials,
 } from "./styles";
 
 export const ExperienceSection = () => {
+  const srcGitHubImage = useMemo(() => 'https://github.com/Pliskeviski.png?size=180', []);
+  const srcGitHub = useMemo(() => 'https://github.com/Pliskeviski', []);
+
   const experiences = useMemo(() => [
     {
       id: 0,
@@ -37,6 +57,19 @@ export const ExperienceSection = () => {
     },
   ], []);
 
+  const socials = useMemo(() => [
+    {
+      id: 0,
+      icon: faLinkedin,
+      link: 'https://www.linkedin.com/in/pliskeviski/',
+    },
+    {
+      id: 1,
+      icon: faGithub,
+      link: 'https://github.com/Pliskeviski',
+    },
+  ], []);
+
   return (
     <SectionContainer>
       <ContentContainer title="Experiences" background="dark">
@@ -55,7 +88,31 @@ export const ExperienceSection = () => {
           ))}
         </ContainerTimeline>
       </ContentContainer>
-      <ContentContainer title="Projects" background="light">
+      <ContentContainer title="Projects" background="light" centered>
+        <ContactContainer>
+          <ContainerGitHub>
+            <CheckGitHubText>Check out my GitHub profile:</CheckGitHubText>
+            <GitHubLink href={srcGitHub} target="_blank">
+              <GitHubImage src={srcGitHubImage} />
+            </GitHubLink>
+            <GitHubName>Pliskeviski</GitHubName>
+            <EmailContact>
+              Reach out to me:
+              <br />
+              <LinkEmail href="mailto:gustavopliskeviski@gmail.com">gustavopliskeviski@gmail.com</LinkEmail>
+            </EmailContact>
+          </ContainerGitHub>
+
+          <ContainerContact>
+            <FindMeOn>
+              Find me on:
+            </FindMeOn>
+
+            <ContainerSocials>
+              {socials.map(({ id, icon, link }) => <FontAwesomeIcon onClick={() => window.open(link, '_blank')} key={`social-${id}`} icon={icon} size="3x" />)}
+            </ContainerSocials>
+          </ContainerContact>
+        </ContactContainer>
       </ContentContainer>
     </SectionContainer>
   );

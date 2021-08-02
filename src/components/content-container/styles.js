@@ -13,10 +13,13 @@ export const Content = styled.div`
   min-width: 298px;
   margin: auto;
   font-size: ${({ theme }) => theme.fontSize.body.md};
+  height: 90%;
 `;
 
 export const ContainerTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.title};
   font-family: ${({ theme }) => theme.fonts.secondary};
   margin-top: 0;
+
+  ${({ centered }) => centered && 'text-align: center;'}
 `;
