@@ -17,10 +17,12 @@ import {
 
 export const AboutSection = () => {
   const aboutMeText = useMemo(() => {
-    return `I’m Gustavo Pliskeviski, a full-stack developer based in Curitiba, Brazil.
-            Currently, I'm working at VanHack, focusing more on the front-end side.
-            I've learned a lot throughout the years in the tech industry with different projects and clients.
-            I’m also a design enthusiast!`;
+    return <>
+      I’m Gustavo Pliskeviski, a full-stack developer from Curitiba, Brazil.
+      Currently, I’m working at VanHack with ReactJS and .NET Core.
+      I’ve learned a lot throughout the years in the tech industry with different projects, ranging from small to large clients. <br />
+      Oh, and also, I’m a design enthusiast!
+    </>;
   }, []);
 
   const skills = useMemo(() => {
