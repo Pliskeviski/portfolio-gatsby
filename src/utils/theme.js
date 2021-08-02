@@ -3,6 +3,7 @@ export const theme = {
     light: "#fff9f9",
     dark: "#383838",
     black: "#000000",
+    indicator: "#dedede",
   },
   fonts: {
     primary: "Nunito, sans-serif",
