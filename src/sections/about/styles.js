@@ -31,20 +31,22 @@ export const SkillsProgressContainer = styled.div`
 `;
 
 export const ProgressBar = styled.div`
-  height: 25px;
+  height: 30px;
   position: relative;
   background-color: ${({ theme }) => theme.colors.dark};
   border-radius: 25px;
-  padding: 2px;
   width: 100%;
+  box-sizing: content-box;
+  border: 2px solid ${({ theme }) => theme.colors.dark};
 `;
 
 export const InnerProgress = styled.span`
   background-color: ${({ theme }) => theme.colors.light};
   display: block;
   height: 100%;
+  left: 0;
   border-radius: 25px;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   top: 50%;
   transform: translateY(-50%);
