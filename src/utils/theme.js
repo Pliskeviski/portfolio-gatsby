@@ -12,9 +12,11 @@ export const theme = {
     hero: "15vw",
     title: "4.8rem",
     body: {
-      lg: "2.1rem",
+      xl: "2.1rem",
+      lg: "1.9rem",
       md: "1.4rem",
       sm: "1.1rem",
+      xs: "1rem",
     },
   },
   breakpoints: {

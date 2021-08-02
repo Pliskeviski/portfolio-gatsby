@@ -1,13 +1,67 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { SectionContainer } from "@components/section-container";
-import { ContentContainer } from "../../components/content-container";
+import { ContentContainer } from "@components/content-container";
+
+import {
+  FamiliarWithLanguages,
+  FamiliarWithText,
+  InnerProgress,
+  ProgressBar,
+  ProgressValue,
+  SkillContainer,
+  SkillLabel,
+  SkillsContainer,
+  SkillsProgressContainer,
+  SubTitleSkills,
+} from "./styles";
 
 export const AboutSection = () => {
   const aboutMeText = useMemo(() => {
     return `I’m Gustavo Pliskeviski, a full-stack developer based in Curitiba, Brazil.
             Currently, I'm working at VanHack, focusing more on the front-end side.
             I've learned a lot throughout the years in the tech industry with different projects and clients.
-            I’m also a design enthusiast living in Curitiba, Brazil.`;
+            I’m also a design enthusiast!`;
+  }, []);
+
+  const skills = useMemo(() => {
+    return [
+      {
+        label: "ReactJS",
+        value: "90%",
+      },
+      {
+        label: ".NET Core",
+        value: "88%",
+      },
+      {
+        label: "Angular",
+        value: "86%",
+      },
+      {
+        label: "HTML & CSS",
+        value: "96%",
+      },
+      {
+        label: "React Native",
+        value: "80%",
+      },
+    ];
+  }, []);
+
+  const RenderItemSkills = useCallback(({ skill }) => {
+    const { label, value } = skill;
+
+    return (
+      <SkillContainer>
+        <SkillLabel>{label}</SkillLabel>
+        <SkillsProgressContainer>
+          <ProgressBar>
+            <InnerProgress progress={value} />
+          </ProgressBar>
+          <ProgressValue>{value}</ProgressValue>
+        </SkillsProgressContainer>
+      </SkillContainer>
+    );
   }, []);
 
   return (
@@ -16,7 +70,18 @@ export const AboutSection = () => {
         {aboutMeText}
       </ContentContainer>
       <ContentContainer title="Technologies" background="light">
-        a
+        <SubTitleSkills>How confident I fell about:</SubTitleSkills>
+
+        <SkillsContainer>
+          {skills.map((skill) => (
+            <RenderItemSkills key={skill.label} skill={skill} />
+          ))}
+        </SkillsContainer>
+
+        <FamiliarWithText>But I&apos;m also familiar with:</FamiliarWithText>
+        <FamiliarWithLanguages>
+          C++, VueJS, OpenGL, NodeJS, Ruby on Rails and many others!
+        </FamiliarWithLanguages>
       </ContentContainer>
     </SectionContainer>
   );
