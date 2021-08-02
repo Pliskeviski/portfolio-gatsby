@@ -46,6 +46,8 @@ export const InnerProgress = styled.span`
   border-radius: 25px;
   position: relative;
   overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
 
   width: ${({ progress }) => `${progress}`};
 `;

@@ -9,8 +9,10 @@ export const StyledContentContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 300px;
+  max-width: 50%;
+  min-width: 298px;
   margin: auto;
+  font-size: ${({ theme }) => theme.fontSize.body.md};
 `;
 
 export const ContainerTitle = styled.h2`

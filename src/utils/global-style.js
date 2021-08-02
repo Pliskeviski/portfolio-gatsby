@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
 		font-size: ${({ theme }) => theme.fontSize.body.md};
 		font-family: ${({ theme }) => theme.fonts.primary};
 	}
+
+  :root {
+    font-size: 60.5%;
+  }
 	
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
 	  :root {

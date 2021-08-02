@@ -1,73 +1,54 @@
 import styled from "styled-components";
 
-export const SubTitleSkills = styled.p`
-  margin: 0;
-  font-family: ${({ theme }) => theme.fonts.secondary};
-  margin-bottom: 30px;
-  font-weight: 800;
-`;
-
-export const SkillsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  grid-gap: 20px;
-`;
-
-export const SkillContainer = styled.div`
+export const ContainerTimeline = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const SkillLabel = styled.h6`
-  margin-top: 0;
-  margin-bottom: 7px;
-  font-size: ${({ theme }) => theme.fontSize.body.xl};
-  font-family: ${({ theme }) => theme.fonts.secondary};
-`;
-
-export const SkillsProgressContainer = styled.div`
+export const ContainerItemTimeline = styled.div`
   display: flex;
-  align-items: center;
-`;
-
-export const ProgressBar = styled.div`
-  height: 25px;
+  flex-direction: column;
+  padding: 0 3em 2em 2em;
   position: relative;
-  background-color: ${({ theme }) => theme.colors.dark};
-  border-radius: 25px;
-  padding: 2px;
-  width: 100%;
+  max-width: 378px;
+
+  &:before {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 5px;
+    position: absolute;
+    left: -7px;
+    border-radius: 10px;
+    content: "";
+    border: 2px solid ${({ theme }) => theme.colors.light};
+    background: ${({ theme }) => theme.colors.light};
+  }
+
+  &:after {
+    content: "";
+    width: 3px;
+    height: 90%;
+    left: -2px;
+    top: 18px;
+    position: absolute;
+    background: ${({ theme }) => theme.colors.light};
+  }
+
+  &:last-child {
+    &:after {
+      content: none;
+    }
+  }
 `;
 
-export const InnerProgress = styled.span`
-  background-color: ${({ theme }) => theme.colors.light};
-  display: block;
-  height: 100%;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden;
-
-  width: ${({ progress }) => `${progress}`};
-`;
-
-export const ProgressValue = styled.div`
-  align-self: center;
-  padding-left: 10px;
+export const ItemTitle = styled.h6`
   font-size: ${({ theme }) => theme.fontSize.body.lg};
   font-family: ${({ theme }) => theme.fonts.secondary};
-  font-weight: bold;
+  margin: 0;
 `;
 
-export const FamiliarWithText = styled.p`
-  font-family: ${({ theme }) => theme.fonts.secondary};
-  margin: 0;
+export const ItemDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSize.body.sm};
-  font-weight: bold;
-  margin-top: 20px;
-`;
-
-export const FamiliarWithLanguages = styled.p`
-  font-family: ${({ theme }) => theme.fonts.secondary};
-  margin: 0;
-  font-size: ${({ theme }) => theme.fontSize.body.xs};
+  font-weight: 800;
 `;
