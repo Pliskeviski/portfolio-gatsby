@@ -5,6 +5,7 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: auto;
 `;
 
 export const ContainerTimeline = styled.div`

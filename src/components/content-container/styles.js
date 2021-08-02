@@ -9,6 +9,8 @@ export const StyledContentContainer = styled.div`
   min-height: 100vh;
   box-sizing: border-box;
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Content = styled.div`
@@ -17,6 +19,9 @@ export const Content = styled.div`
   margin: auto;
   font-size: ${({ theme }) => theme.fontSize.body.md};
   height: 90%;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ContainerTitle = styled.h2`
