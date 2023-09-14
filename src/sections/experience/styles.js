@@ -81,6 +81,9 @@ export const GitHubImage = styled.div`
   border-radius: 100px;
   background: url(${({ src }) => src});
   margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 export const GitHubName = styled.div`

@@ -19,7 +19,7 @@ export const AboutSection = () => {
   const aboutMeText = useMemo(() => {
     return <>
       I’m Gustavo Pliskeviski, a full-stack developer from Curitiba, Brazil.
-      Currently, I’m working at VanHack with ReactJS and .NET Core.
+      Currently, I’m working at HomeFromCollege with React.JS and Node.JS.
       I’ve learned a lot throughout the years in the tech industry with different projects, ranging from small to large clients. <br />
       Oh, and also, I’m a design enthusiast!
     </>;
