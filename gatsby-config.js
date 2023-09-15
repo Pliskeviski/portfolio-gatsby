@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.pliskeviski.com",
     title: "Pliskeviski",
   },
   plugins: [
@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-121602336-3",
+        trackingId: "G-6MZ84F6M6Q",
       },
     },
     "gatsby-plugin-react-helmet",
@@ -45,10 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          "Nunito:700,800",
-          "Poppins:500,700",
-        ],
+        fonts: ["Nunito:700,800", "Poppins:500,700"],
         display: "swap",
       },
     },
