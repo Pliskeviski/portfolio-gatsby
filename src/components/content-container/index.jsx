@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import { ContainerTitle, Content, StyledContentContainer } from "./styles";
 
 export const ContentContainer = (props) => {
